@@ -1,0 +1,18 @@
+[Desktop Entry]
+Categories=
+Comment=Technical Diagramming
+Comment[en]=Technical Diagramming
+Encoding=UTF-8
+Exec=java -jar /mnt/shared/Common/usr/local/bin/yed/yed.jar
+Icon=/mnt/shared/Common/usr/local/share/icons/yEd.png
+MimeType=
+Name=yEdit
+Name[en]=yEdit
+Path=/mnt/shared/Common/usr/local/bin/yed
+ServiceTypes=
+SwallowExec=
+SwallowTitle=
+Terminal=
+TerminalOptions=
+Type=Application
+URL=

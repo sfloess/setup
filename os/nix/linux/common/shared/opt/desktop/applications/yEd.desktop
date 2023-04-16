@@ -1,0 +1,20 @@
+[Desktop Entry]
+Categories=
+Comment=Technical Diagramming
+Comment[en]=Technical Diagramming
+Encoding=UTF-8
+#Exec=java -jar /opt/yed/yed.jar
+Exec=/opt/yEd/yEd
+#Icon=/opt/yed/icons/yed.ico
+Icon=/opt/desktop/images/icons/yEd.png
+MimeType=
+Name=yEdit
+Name[en]=yEdit
+Path=/opt/yed
+ServiceTypes=
+SwallowExec=
+SwallowTitle=
+Terminal=
+TerminalOptions=
+Type=Application
+URL=

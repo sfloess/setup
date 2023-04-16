@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Archimate
+Comment=Diagramming tool
+Type=Application
+Terminal=false
+Exec=/home/sfloess/Tools/Archi/Archi
+Icon=/home/sfloess/Tools/Archi/icon.xpm

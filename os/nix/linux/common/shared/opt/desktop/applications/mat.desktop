@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Mat
+Comment=Mat
+Type=Application
+Icon=/opt/mat
+Exec=/opt/mat/MemoryAnalyzer -vmargs -Xmx32g

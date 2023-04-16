@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Chrome
+Comment=Chrome
+Type=Application
+Icon=/mnt/cloud-server/shared/desktop/images/apps/chrome.png
+Exec=chrome %U
+Categories=Network;WebBrowser;

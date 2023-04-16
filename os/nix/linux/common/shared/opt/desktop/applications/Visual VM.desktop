@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=/opt/visualvm/bin/visualvm
+Icon=/opt/desktop/images/icons/visual-vm.png
+Name=Visual VM
+NoDisplay=false
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

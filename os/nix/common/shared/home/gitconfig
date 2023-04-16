@@ -1,0 +1,11 @@
+[user]
+	name = Scot P. Floess
+	email = sfloess@gmail.com
+[author]
+	name = Flossy
+	email = sfloess@gmail.com
+[push]
+	default = simple
+[color]
+	ui = auto
+

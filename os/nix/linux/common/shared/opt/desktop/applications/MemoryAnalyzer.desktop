@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Memory Analyzer
+Comment=Memory Analyzer
+Type=Application
+Icon=/opt/desktop/images/icons/memory-analyzer.png
+Exec=/opt/mat/MemoryAnalyzer -vmargs -Xmx32g
+StartupNotify=true
+Terminal=false

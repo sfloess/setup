@@ -1,0 +1,19 @@
+[Desktop Entry]
+Categories=
+Comment=Groovy IDE
+Comment[en]=Groovy IDE
+Encoding=UTF-8
+Categories=Development;IDE;
+Exec=/mnt/shared/Common/usr/local/share/groovy/bin/groovyConsole
+Icon=/mnt/shared/Common/usr/local/share/groovy/src/xdocs/images/groovy-logo.png
+MimeType=
+Name=Groovy Console
+Name[en]=Groovy Console
+Path=/mnt/shared/Common/usr/local/bin/groovy/bin
+ServiceTypes=
+SwallowExec=
+SwallowTitle=
+Terminal=
+TerminalOptions=
+Type=Application
+URL=

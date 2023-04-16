@@ -1,0 +1,15 @@
+select 0
+
+deflogin off
+
+vbell on
+
+autodetach on
+
+startup_message off
+
+defscrollback 5000
+
+caption always "%{= bW}%?[%w]  %=%{= bR}[%H]  %{= bG}[%D %m/%d/%y]  %{= bY}[%C %a]"
+
+hardstatus alwaysignore

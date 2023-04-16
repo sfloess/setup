@@ -1,0 +1,2 @@
+bolt-path = "/mnt/pi-02/sda/var/lib/influxdb/influxd.bolt"
+engine-path = "/mnt/pi-02/sda/var/lib/influxdb/engine"

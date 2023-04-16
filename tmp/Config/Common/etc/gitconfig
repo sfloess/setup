@@ -1,0 +1,11 @@
+[user]
+	name = Scot P. Floess
+	email = sfloess@redhat.com
+[author]
+	name = Flossy
+	email = sfloess@redhat.com
+[push]
+	default = simple
+[color]
+	ui = auto
+

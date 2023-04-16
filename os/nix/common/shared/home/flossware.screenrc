@@ -1,0 +1,30 @@
+screen -t "admin-ap"
+
+screen -t "basement-ap"
+stuff "ssh root@basement-ap\015"
+
+screen -t "server-ap"
+stuff "ssh root@server-ap\015"
+
+screen -t "pi-01"
+stuff "ssh root@pi-01\015"
+
+screen -t "pi-02"
+stuff "ssh root@pi-02\015"
+
+screen -t "storage"
+stuff "ssh root@storage\015"
+
+screen -t "server-01"
+stuff "ssh root@server-01\015"
+
+screen -t "server-02"
+stuff "ssh root@server-02\015"
+
+screen -t "neon-workstation"
+stuff "ssh root@neon-workstation\015"
+
+screen -t "host"
+
+source screenrc
+

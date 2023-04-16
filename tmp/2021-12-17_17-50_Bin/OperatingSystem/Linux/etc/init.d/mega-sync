@@ -1,0 +1,27 @@
+#!/bin/bash
+
+start() {
+    cd ~
+    nohup mega-sync &
+}
+
+stop() {
+    /usr/bin/pkill mega-cmd-server
+}
+
+restart() {
+    stop
+    start
+}
+
+case $1 in
+    stop)
+        stop
+        ;;
+    start)
+        start
+        ;;
+    restart)
+        restart
+        ;;
+esac

@@ -1,0 +1,9 @@
+[ssh-ipfw]
+enabled  = true
+filter   = sshd
+action   = ipfw[name=SSH, port=ssh, protocol=tcp]
+logpath  = /var/log/auth.log
+findtime = 31557600
+maxretry = 4
+bantime  = 31557600
+ignoreip = 192.168.1.0/24

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+logFile=/var/log/ensure-dnsmasq.log
+pidFile=/var/run/dnsmasq/dnsmasq.pid
+
+rm $logFile
+
+while [ true ]
+do
+    while [ ! -e $pidFile ]
+    do
+        /etc/init.d/dnsmasq start
+
+        echo "`date`  Waiting on pid file to exist" >> $logFile
+
+        sleep 1
+    done
+
+    pid=`cat $pidFile`
+
+    echo "Waiting on $pid" >> $logFile
+
+    tail --pid=$pid -f /dev/null
+done

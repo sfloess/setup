@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ssh $* "apt-get autoremove --purge -y ; apt update -y --allow-unauthenticated ; apt upgrade -y --allow-unauthenticated ; apt-get clean"
+
+#apt-get autoremove --purge -y
+
+##apt-get --allow-unauthenticated update  -y
+##apt-get --allow-unauthenticated upgrade -y
+
+#apt-get -o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsecureRepositories=true update  -y --allow-unauthenticated
+#apt-get -o Acquire::AllowInsecureRepositories=true -o Acquire::AllowDowngradeToInsecureRepositories=true upgrade -y --allow-unauthenticated
+
+#apt-get clean

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Netbeans
+Comment=Netbeans
+Type=Application
+Categories=Development;IDE;
+Icon=/opt/netbeans/nb/netbeans.png
+Exec=/opt/netbeans/bin/netbeans
+StartupNotify=true

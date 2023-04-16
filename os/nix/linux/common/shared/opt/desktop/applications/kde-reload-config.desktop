@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Reload KDE Config
+Comment=Reload KDE Config
+Type=Application
+Terminal=false
+Exec=killall plasmashell && kstart plasmashell
+Icon=/opt/desktop/images/icons/reload.png
+Categories=ConsoleOnly;System;

@@ -1,0 +1,17 @@
+[Unit]
+Description=ActiveMQ Service
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/opt/apache-activemq/data/activemq.pid
+WorkingDirectory=/opt/apache-activemq/bin
+ExecStart=/opt/apache-activemq/bin/activemq start
+ExecStop=/opt/apache-activemq/bin/activemq stop
+Restart=on-abort
+TimeoutStartSec=600
+TimeoutStopSec=600
+RestartSec=600
+
+[Install]
+WantedBy=multi-user.target

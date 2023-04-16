@@ -1,0 +1,31 @@
+#!/bin/bash
+
+stop() {
+    echo "Stopping..."
+    
+    pkill cobblerd
+}
+
+start() {
+    echo "Starting..."
+
+    cobblerd -B
+}
+
+restart() {
+    stop
+    start
+}
+
+case $1 in
+    stop)
+        stop
+        ;;
+    start)
+        start
+        ;;
+    restart)
+        restart
+        ;;
+esac
+

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Netbeans
+Comment=Netbeans
+Type=Application
+Categories=Development;IDE;
+Icon=/mnt/shared/Common/usr/local/share/icons/netbeans.png
+Exec=/mnt/shared/Common/usr/local/bin/netbeans/bin/netbeans

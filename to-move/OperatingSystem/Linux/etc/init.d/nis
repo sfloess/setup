@@ -1,0 +1,28 @@
+#!/bin/sh
+
+stop() {
+        /opt/bin/pkill ypserv
+}
+
+start() {
+        /opt/sbin/ypserv
+}
+
+restart() {
+    stop
+    start
+}
+
+case $1 in
+    stop)
+        stop
+        ;;
+
+    start)
+        start
+        ;;
+
+    restart)
+        restart
+        ;;
+esac

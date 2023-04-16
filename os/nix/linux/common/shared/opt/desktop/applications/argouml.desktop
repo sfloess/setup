@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Argo UML
+Comment=Argo UML
+Type=Application
+Icon=/opt/argouml/icon/ArgoIcon128x128.png
+Exec=/opt/argouml/argouml.sh

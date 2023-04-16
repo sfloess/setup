@@ -1,0 +1,39 @@
+
+#     Free Storage
+# Name             Storage    Comments
+# ------------------------------------
+# Backblaze B2     10 GB
+# Box              50 GB *
+# Dropbox          02 GB
+# Google           15 GB
+# Jottacloud       05 GB
+# Koofr            10 GB
+# Microsoft        05 GB
+# OpenDrive        50 GB *
+# Yandex           10 GB
+# pCloud           07 GB
+
+# ------------------------------------
+
+# Amazon           25 GB       No longer provided
+# Hubic            25 GB       No longer provided
+# Mega             50 GB       Main backups are used here, excluding from rclone
+
+# Google           15 GB
+
+# ------------------------------------
+
+# Box              50 GB 
+# OpenDrive        50 GB 
+# Backblaze B2     10 GB
+# Koofr            10 GB
+# Yandex           10 GB
+# pCloud           07 GB
+# Jottacloud       05 GB
+# Microsoft        05 GB
+# Dropbox          02 GB
+                  ------
+                  149 GB
+
+# ------------------------------------
+

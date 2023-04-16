@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Freemind
+Comment=Freemind
+Categories=Office
+Type=Application
+Icon=/mnt/shared/Common/usr/local/share/icons/freemind.png
+Exec=/mnt/shared/Common/usr/local/bin/freemind/freemind.sh

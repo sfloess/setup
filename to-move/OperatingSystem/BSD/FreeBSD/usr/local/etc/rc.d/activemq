@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# PROVIDE: activemq
+# REQUIRE: DAEMON
+# KEYWORD: shutdown
+
+# Add the following lines to /etc/rc.conf to enable activemq:
+# activemq_enable="YES"
+# activemq_flags="<set as needed>"
+
+. /etc/rc.subr
+
+name="activemq"
+rcvar=activemq_enable
+
+export JAVACMD=/usr/local/openjdk14/bin/java
+export JAVA_HOME=/usr/local/openjdk14
+
+client="/usr/local/opt/apache-activemq/bin/activemq"
+
+load_rc_config ${name}
+
+activemq_enable=${activemq_enable-"NO"}
+pidfile=${activemq_pidfile-"/usr/local/opt/apache-activemq/data/activemq.pid"}
+
+start_cmd="${client} start"
+stop_cmd="${client} stop"
+reload_cmd="${client} reload"
+status_cmd="${client} status"
+
+run_rc_command "$1"

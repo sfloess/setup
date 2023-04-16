@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Android Studio
+Comment=Android Studio
+Type=Application
+Categories=Development;IDE;
+Icon=/home/sfloess/Tools/android-studio/bin/studio.png
+Exec=/mnt/shared/Common/usr/local/share/android-studio/bin/studio.sh

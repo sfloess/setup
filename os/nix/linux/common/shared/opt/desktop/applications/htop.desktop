@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=htop
+Comment=htop
+GenericName=htop
+Exec=xterm -fg white -bg black htop
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=htop
+Categories=System
+StartupNotify=true

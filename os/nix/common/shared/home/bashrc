@@ -1,0 +1,176 @@
+# .bashrc
+
+# ------------------------------------------------------------
+
+# Source global definitions
+if [ -f /etc/bashrc ]
+then
+    . /etc/bashrc
+fi
+
+# ------------------------------------------------------------
+
+if [ -f /etc/bash_completion ]
+then
+    . /etc/bash_completion
+fi
+
+# ------------------------------------------------------------
+
+__compute_circle() {
+    if [ "$1" = "0" ]
+    then
+        echo 🔵
+    else
+        echo 🔴
+    fi
+}
+
+__compute_git_info() {
+    local GIT_INFO="`git remote 2> /dev/null | tr -s '\n' '/' | cut -f 1 -d '/'` `git branch 2> /dev/null | grep -e '\*' | cut -f 2 -d ' '`"
+
+    if [ "${GIT_INFO}" != " " ]
+    then
+        echo " ${GIT_INFO}"
+    fi
+}
+
+__prompt_command() {
+    local STATUS="$?"
+    local CIRCLE=`__compute_circle ${STATUS}`
+    local GIT_INFO=`__compute_git_info`
+
+    PS1="\n${CIRCLE}\[\033[0;37m\][\[\033[1;36m\]\u\[\033[0;31m\]@\h\[\033[0;32m\]${GIT_INFO}\[\033[0;37m\]] \`pwd\`>\[\033[0m\] "
+}
+
+# ------------------------------------------------------------
+
+killMe() {
+        ps -fu sfloess | awk '{print $2}' | xargs kill -9
+}
+
+# ------------------------------------------------------------
+
+git-push() {
+	local GIT_REMOTE="`git remote 2> /dev/null`"
+
+	if [ $? -ne 0 ]
+	then
+		echo
+		echo
+		echo "ERROR:  not in a git repo!"
+		echo
+		echo
+
+		exit 1
+	fi
+
+	local GIT_BRANCH="`git branch 2> /dev/null | cut -f 2 -d ' '`"
+
+	if [ $? -ne 0 ]
+	then
+		echo
+		echo
+		echo "ERROR:  no branch!"
+		echo
+		echo
+
+		exit 1
+	fi
+
+	COMMIT_MSG="$@"
+
+	if [ "${COMMIT_MSG}" = "" ]
+	then
+		COMMIT_MSG="Latest"
+	fi
+
+	git add .
+	git commit -m ${COMMIT_MSG}
+	git push ${GIT_REMOTE} ${GIT_BRANCH}
+
+	return $?
+}
+
+# ------------------------------------------------------------
+
+webm-2-mp4() {
+	ffmpeg -i "$@" -max_muxing_queue_size 200000 `basename "$@" .webm`.mp4
+}
+
+mkv-2-mp4() {
+    ffmpeg -i "$@" -strict -2 -codec copy `basename $@ .mkv`.mp4
+}
+
+mp4-2-mp4() {
+        ffmpeg -i "$@" -codec copy "converted_$@".mp4 
+		mv "converted_$@".mp4 "$@"
+}
+
+# ------------------------------------------------------------
+
+export PROMPT_COMMAND=__prompt_command
+
+# ------------------------------------------------------------
+
+export TERM=xterm-color
+
+# ------------------------------------------------------------
+
+export BASHRC_FILE=`readlink -f ${BASH_SOURCE[0]}`
+export CONFIG_ETC_HOME=`dirname ${BASHRC_FILE}`
+export CONFIG_COMMON_HOME=`dirname ${CONFIG_ETC_HOME}`
+export CONFIG_HOME=`dirname ${CONFIG_COMMON_HOME}`
+
+export BASH_HOME=`dirname ${CONFIG_HOME}`
+
+export BIN_HOME=${BASH_HOME}/Bin
+
+# ------------------------------------------------------------
+
+export PATH=${BIN_HOME}:${PATH}
+
+# OS specific processing
+if [ `uname` = "Linux" ]
+then
+    # Termux on Android has issues
+    if [ `uname -o` != "Android" ]
+    then
+        export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
+    fi
+fi
+
+# ------------------------------------------------------------
+
+export EDITOR=vim
+export GVIMRC_FILE=${CONFIG_ETC_HOME}/gvimrc
+
+alias vi='vim'
+alias vim="vim -p -N -u ${GVIMRC_FILE}"
+alias gvim="gvim -p -N -u ${GVIMRC_FILE}"
+
+# ------------------------------------------------------------
+
+alias mkdir='mkdir -p'
+alias ..='cd ..'
+
+# ------------------------------------------------------------
+
+alias ll='ls -latr --color=auto'
+
+# ------------------------------------------------------------
+
+alias gen-mac="openssl rand -hex 6 | sed 's/\(..\)\(..\)\(..\)\(..\)\(..\)\(..\)/\1:\2:\3:\4:\5:\6/'"
+
+# ------------------------------------------------------------
+
+export FLOSSWARE_SCREENRC_FILE="${CONFIG_ETC_HOME}/flossware.screenrc"
+
+alias flossware-screen="cd /exports/Development/github/sfloess/bash && screen -S flossware -c ${FLOSSWARE_SCREENRC_FILE}"
+
+# ------------------------------------------------------------
+
+mkdir -p ~/.vimbak  ~/.vimswp
+
+# ------------------------------------------------------------
+

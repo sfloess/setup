@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Reload LXDE Config
+Comment=Reload LXDE Config
+Type=Application
+Terminal=false
+Exec=lxpanelctl restart && openbox --restart
+Icon=/mnt/cloud-server/shared/desktop/images/icons/reload.png
+Categories=ConsoleOnly;System;

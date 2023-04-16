@@ -1,0 +1,39 @@
+#!/bin/bash
+
+export PATH=${PATH}:/usr/local/bin
+
+echo "`date`  Running mega-cmd-server [$1]"
+
+start() {
+    echo "`date`  Starting mega-cmd-server"
+    mega-cmd-server &
+}
+
+stop() {
+    echo "`date`  Stopping mega-cmd-server"
+    /usr/bin/pkill mega-cmd-server
+}
+
+restart() {
+    echo "`date`  Restarting mega-cmd-server"
+    stop
+    start
+}
+
+case $1 in
+    stop)
+        stop
+        ;;
+    start)
+        start
+        ;;
+    restart)
+        restart
+        ;;
+esac
+
+echo "`date`  Done running mega-cmd-server..."
+
+ps aux | grep mega | grep -v grep
+
+exit 0

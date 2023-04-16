@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=JMeter
+Comment=JMeter
+Type=Application
+Icon=/mnt/shared/Common/usr/local/share/icons/icon-apache.png
+Exec=/mnt/shared/Common/usr/local/bin/apache-jmeter/bin/jmeter

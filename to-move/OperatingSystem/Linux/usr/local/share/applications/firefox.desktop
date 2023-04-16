@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Firefox
+Comment=Browse the World Wide Web
+GenericName=Web Browser
+X-GNOME-FullName=Firefox Web Browser
+#Exec=/opt/firefox/firefox
+#Exec=/home/sfloess/firefox/firefox
+Exec=firefox
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+#Icon=/opt/firefox/browser/chrome/icons/default/default16.png
+#Icon=/home/sfloess/firefox/browser/chrome/icons/default/default16.png
+Icon=firefox
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/vnd.mozilla.xul+xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;
+StartupWMClass=Firefox
+StartupNotify=true

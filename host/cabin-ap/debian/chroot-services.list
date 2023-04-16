@@ -1,0 +1,7 @@
+rsyslog
+rpcbind
+ntpdate-debian
+ntp
+postfix
+cron
+ssh

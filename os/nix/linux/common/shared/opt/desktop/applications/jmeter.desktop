@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=JMeter
+Comment=JMeter
+Type=Application
+Icon=/opt/apache-jmeter/bin/report-template/content/pages/icon-apache.png
+Exec=/opt/apache-jmeter/bin/jmeter

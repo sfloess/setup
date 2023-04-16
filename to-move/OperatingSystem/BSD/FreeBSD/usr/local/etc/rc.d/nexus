@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# PROVIDE: nexus
+# REQUIRE: DAEMON
+# KEYWORD: shutdown
+
+# Add the following lines to /etc/rc.conf to enable activemq:
+# nexus_enable="YES"
+# nexus_flags="<set as needed>"
+
+. /etc/rc.subr
+
+name="nexus"
+rcvar=nexus_enable
+
+export JAVACMD=/usr/local/openjdk8/bin/java
+export JAVA_HOME=/usr/local/openjdk8
+
+client="/usr/local/nexus/bin/nexus"
+
+load_rc_config ${name}
+
+nexus_enable=${nexus_enable-"NO"}
+#pidfile=${nexus_pidfile-"/usr/local/opt/apache-activemq/data/activemq.pid"}
+
+start_cmd="${client} start"
+stop_cmd="${client} stop"
+reload_cmd="${client} reload"
+status_cmd="${client} status"
+
+run_rc_command "$1"

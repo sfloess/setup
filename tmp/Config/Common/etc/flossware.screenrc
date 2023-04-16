@@ -1,0 +1,25 @@
+screen -t "admin-ap"
+stuff "ssh -p 2222 root@admin-ap\015"
+
+screen -t "cloud-ap"
+stuff "ssh root@cloud-ap\015"
+
+screen -t "desktop-ap"
+stuff "ssh root@desktop-ap\015"
+
+screen -t "bedroom-ap"
+stuff "ssh root@bedroom-ap\015"
+
+screen -t "cloud-storage"
+stuff "ssh root@cloud-storage\015"
+
+screen -t "pi-01"
+stuff "ssh root@pi-01\015"
+
+screen -t "pi-02"
+stuff "ssh root@pi-02\015"
+
+screen -t "cloud-server"
+stuff "ssh root@cloud-server\015"
+
+source screenrc

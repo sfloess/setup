@@ -1,0 +1,15 @@
+/mnt	        	/etc/auto.hosts
+/mnt/desktop-ap  	/etc/auto.desktop-ap
+
+#/mnt/host/admin-ap    /etc/auto.admin-ap
+#/mnt/host/amy         /etc/auto.amy
+#/mnt/host/server-02   /etc/auto.server-02
+#/mnt/host/redhat-nfs  /etc/auto.redhat-nfs
+#/mnt/host/server-ap   /etc/auto.server-ap
+
+#/mnt/bedroom-ap      /etc/auto.bedroom-ap
+#/mnt/cloud-server    /etc/auto.cloud-server
+#/mnt/den-ap          /etc/auto.den-ap
+#/mnt/desktop-ap      /etc/auto.desktop-ap
+#/mnt/family-ap       /etc/auto.family-ap
+#/mnt/jware-cloud    /etc/auto.jware-cloud

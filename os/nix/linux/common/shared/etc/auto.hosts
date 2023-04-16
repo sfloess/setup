@@ -1,0 +1,6 @@
+nas    			    -rw    nas:/mnt/md0/exports
+pi-02    		    -rw    pi-02:/exports
+redhat-workstation	-rw    redhat-workstation:/exports
+
+amy -fstype=cifs,rw,user='',pass='' ://amy/exports
+ike -fstype=cifs,rw,user='',pass='' ://ike/exports

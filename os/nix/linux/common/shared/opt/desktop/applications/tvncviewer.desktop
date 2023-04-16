@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=TurboVNC Viewer
+Comment=TurboVNC client application
+Icon=/opt/desktop/images/icons/turbovnc-128.png
+Exec=/opt/TurboVNC/bin/vncviewer
+Terminal=0
+Type=Application
+Categories=Application;Utility;X-Red-Hat-Extra;

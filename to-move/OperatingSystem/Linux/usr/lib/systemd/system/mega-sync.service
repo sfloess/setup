@@ -1,0 +1,13 @@
+[Unit]
+Description=Mega Sync Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDir=~
+ExecStart=/usr/bin/mega-sync
+ExecStop=/usr/bin/pkill mega-cmd-server
+
+[Install]
+WantedBy=network.target

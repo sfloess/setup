@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Postman
+Comment=Postman
+Type=Application
+Icon=/home/sfloess/Tools/Postman/app/resources/app/assets/icon.png
+Exec=/mnt/shared/Common/usr/local/bin/Postman/app/Postman

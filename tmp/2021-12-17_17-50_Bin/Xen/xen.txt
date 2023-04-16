@@ -1,0 +1,22 @@
+/usr/lib/python2.7/site-packages/koan
+    xen package needs to be installed
+        app.py
+            if self.virt_type in [ "xenpv", "xenfv" ]: 
+		 cmd = sub_process.Popen("uname -r", stdout=sub_process.PIPE, shell=True) 
+		 uname_str = cmd.communicate()[0] 
+
+		 # correct kernel on dom0? 
+		 #if uname_str < "2.6.37" and uname_str.find("xen") == -1: 
+		 #   raise InfoException("kernel >= 2.6.37 or kernel-xen needs to be in use") 
+		 # xend installed? 
+		 #if not os.path.exists("/usr/sbin/xend"): 
+		 #   raise InfoException("xen package needs to be installed") 
+		 # xend running? 
+		 #rc = sub_process.call("/usr/sbin/xend status", stderr=None, #stdout=None, shell=True) 
+		 #if rc != 0: 
+		 #   raise InfoException("xend needs to be started")
+
+    internal error: unsupported input bus usb
+        virtinstall.py
+            cmd = "virt-install --input keyboard " 
+
